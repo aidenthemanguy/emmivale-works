@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Emmivale Works
 
-## Getting Started
+Emmivale Works is a client-facing studio website for a small commercial technology studio offering websites, custom software, business systems, and ongoing care.
 
-First, run the development server:
+Planned production domain: `emmivaleworks.com`
+
+## Current Stack
+
+- Next.js App Router
+- React
+- TypeScript
+- Tailwind CSS
+- ESLint
+
+## Current Milestone
+
+Milestone 1: brand foundation and site shell.
+
+This milestone establishes the shared layout, core routes, metadata, semantic design tokens, navigation, footer, and honest portfolio-disclosure language. It does not include the full homepage, case studies, or inquiry form.
+
+## Development
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run lint:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run lint
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Run a production build:
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Route Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `/`
+- `/work`
+- `/work/velora-auto-detail`
+- `/work/velora-manager`
+- `/start-a-project`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+There is intentionally no `/services` route yet. Services, process, and about anchors live on the homepage during the early site build.
 
-## Deploy on Vercel
+## Brand Direction
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The working direction is Quiet Craft: human, warm, thoughtful, precise, calm, inventive, and trustworthy. The visual foundation should use typography, generous spacing, thin rules, restrained color, and careful composition rather than heavy decoration or generic SaaS patterns.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Emmivale Works should not structurally resemble the Velora Auto Detail website. Emmivale is a studio portfolio and should feel editorial, exploratory, and work-led, with selected work as the primary visual evidence.
+
+Initial palette direction:
+
+- Deep Ink: `#171A18`
+- Warm Ivory: `#F4F0E8`
+- Muted Moss: `#66745F`
+- Copper / Clay: `#B86F52`
+- Soft Stone: `#D8D2C7`
+
+## Portfolio Honesty
+
+Velora Auto Detail and Velora Manager are fictional portfolio concepts built to demonstrate Emmivale Works' design and development capabilities. They are not client projects or operating businesses.
