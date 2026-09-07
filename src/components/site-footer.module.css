@@ -1,0 +1,131 @@
+.footer {
+  position: relative;
+  z-index: 3;
+  margin-top: -2.3rem;
+  padding-top: 5.5rem;
+  background: var(--foreground);
+  clip-path: polygon(0 2.3rem, 28% 0, 68% 1.8rem, 100% 0, 100% 100%, 0 100%);
+  color: var(--background);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.7fr) minmax(22rem, 1.2fr);
+  align-items: end;
+  gap: 4rem;
+  width: min(91vw, 96rem);
+  margin-inline: auto;
+  padding-bottom: 2.8rem;
+}
+
+.wordmark {
+  font-size: 0.69rem;
+  font-weight: 750;
+  line-height: 1;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.wordmark span {
+  display: block;
+}
+
+.wordmark span:last-child {
+  margin-top: 0.36rem;
+  margin-left: 1.55rem;
+  color: #a6b49d;
+}
+
+.domain {
+  margin-top: 1.2rem;
+  color: rgba(244, 240, 232, 0.62);
+  font-family: var(--font-code);
+  font-size: 0.68rem;
+}
+
+.right {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 3rem;
+}
+
+.workLine {
+  color: rgba(244, 240, 232, 0.65);
+  font-size: 0.72rem;
+  line-height: 1.65;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.7rem 1.35rem;
+}
+
+.nav a {
+  position: relative;
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  color: var(--background);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav a::after {
+  position: absolute;
+  right: 0;
+  bottom: 0.55rem;
+  left: 0;
+  height: 1px;
+  background: var(--accent);
+  content: "";
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 350ms ease;
+}
+
+.nav a:hover::after,
+.nav a:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+@media (max-width: 47.99rem) {
+  .footer {
+    padding-top: 5rem;
+    clip-path: polygon(0 1.6rem, 57% 0, 100% 1.2rem, 100% 100%, 0 100%);
+  }
+
+  .inner,
+  .right {
+    grid-template-columns: 1fr;
+  }
+
+  .inner {
+    width: calc(100% - 3rem);
+    gap: 2.8rem;
+  }
+
+  .right {
+    gap: 1.5rem;
+  }
+
+  .workLine {
+    max-width: 19rem;
+  }
+
+  .nav {
+    justify-content: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav a::after {
+    transition: none;
+  }
+}

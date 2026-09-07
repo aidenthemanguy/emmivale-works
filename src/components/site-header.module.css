@@ -1,0 +1,165 @@
+.header {
+  position: relative;
+  z-index: 30;
+  border-bottom: 1px solid color-mix(in srgb, var(--foreground) 16%, transparent);
+  background: var(--background);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: minmax(9rem, 1fr) auto;
+  align-items: center;
+  width: min(96vw, 105rem);
+  min-height: 4.5rem;
+  margin-inline: auto;
+  gap: 2rem;
+}
+
+.wordmark {
+  position: relative;
+  display: block;
+  width: fit-content;
+  color: var(--foreground);
+  font-size: 0.75rem;
+  font-weight: 750;
+  line-height: 0.92;
+  letter-spacing: 0.19em;
+  text-decoration: none;
+}
+
+.wordmark::after {
+  position: absolute;
+  top: -0.18rem;
+  right: -1.05rem;
+  width: 1px;
+  height: 2.35rem;
+  background: var(--accent);
+  content: "";
+  transform: rotate(24deg);
+  transform-origin: center;
+}
+
+.wordmark span {
+  display: block;
+}
+
+.wordmark span:last-child {
+  margin-top: 0.32rem;
+  margin-left: 1.42rem;
+  color: var(--accent-secondary);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(1rem, 2.4vw, 2.35rem);
+  font-size: 0.77rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.navLink {
+  position: relative;
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navLink::after {
+  position: absolute;
+  right: 0;
+  bottom: 0.48rem;
+  left: 0;
+  height: 1px;
+  background: var(--accent);
+  content: "";
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 350ms ease;
+}
+
+.navLink:hover::after,
+.navLink:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.startLink {
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.62rem;
+  padding: 0.7rem 1rem 0.68rem;
+  background: var(--accent);
+  clip-path: polygon(0 0, calc(100% - 0.7rem) 0, 100% 0.7rem, 100% 100%, 0 100%);
+  color: var(--foreground);
+  text-decoration: none;
+  transition: background-color 350ms ease, color 350ms ease;
+}
+
+.startLink span {
+  transition: transform 350ms ease;
+}
+
+.startLink:hover,
+.startLink:focus-visible {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+.startLink:hover span,
+.startLink:focus-visible span {
+  transform: translateX(0.22rem);
+}
+
+@media (max-width: 42rem) {
+  .inner {
+    width: calc(100% - 2rem);
+    min-height: 4.25rem;
+    gap: 0.8rem;
+  }
+
+  .nav {
+    gap: 0.9rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.04em;
+  }
+
+  .navLink:nth-child(2) {
+    display: none;
+  }
+
+  .startLink {
+    min-height: 2.5rem;
+    padding-inline: 0.75rem;
+  }
+}
+
+@media (max-width: 22rem) {
+  .inner {
+    width: calc(100% - 1.25rem);
+  }
+
+  .wordmark {
+    font-size: 0.66rem;
+  }
+
+  .nav {
+    gap: 0.65rem;
+  }
+
+  .startLink {
+    padding-inline: 0.62rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navLink::after,
+  .startLink,
+  .startLink span {
+    transition: none;
+  }
+}
