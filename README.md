@@ -2,7 +2,7 @@
 
 Emmivale Works is a client-facing studio website for a small commercial technology studio offering websites, custom software, business systems, and ongoing care.
 
-Planned production domain: `emmivaleworks.com`
+Production domain: `emmivaleworks.com`
 
 ## Current Stack
 
@@ -12,11 +12,9 @@ Planned production domain: `emmivaleworks.com`
 - Tailwind CSS
 - ESLint
 
-## Current Milestone
+## Current Site
 
-Milestone 1: brand foundation and site shell.
-
-This milestone establishes the shared layout, core routes, metadata, semantic design tokens, navigation, footer, and honest portfolio-disclosure language. It does not include the full homepage, case studies, or inquiry form.
+The studio site includes the experimental homepage, work overview, two complete Velora case studies, and the Start a Project inquiry flow.
 
 ## Development
 
@@ -46,19 +44,40 @@ npm run build
 - `/work/velora-manager`
 - `/start-a-project`
 
-There is intentionally no `/services` route yet. Services, process, and about anchors live on the homepage during the early site build.
+There is intentionally no `/services` route. Services, process, and about content live on the homepage.
+
+## Project Inquiry Architecture
+
+The Start a Project form uses a small client component for form state and posts to a same-origin Next.js Route Handler:
+
+```text
+Browser
+  -> POST /api/project-inquiries
+  -> server validation and honeypot check
+  -> Resend email delivery
+```
+
+Inquiry credentials remain server-only. Configure these environment variables in the deployment environment:
+
+```text
+RESEND_API_KEY=
+PROJECT_INQUIRY_FROM_EMAIL=
+PROJECT_INQUIRY_TO_EMAIL=
+```
+
+`PROJECT_INQUIRY_FROM_EMAIL` must be an Emmivale-controlled sender verified with the email provider. The submitter's email is used as `Reply-To`, never as the sender. Inquiries are delivered by email and are not stored in a database.
 
 ## Brand Direction
 
-The working direction is Quiet Craft: human, warm, thoughtful, precise, calm, inventive, and trustworthy. The visual foundation should use typography, generous spacing, thin rules, restrained color, and careful composition rather than heavy decoration or generic SaaS patterns.
+The visual direction is Quiet Craft: human, warm, thoughtful, precise, calm, inventive, and trustworthy. The visual foundation uses typography, generous spacing, thin rules, restrained color, and careful composition rather than heavy decoration or generic SaaS patterns.
 
 Emmivale Works should not structurally resemble the Velora Auto Detail website. Emmivale is a studio portfolio and should feel editorial, exploratory, and work-led, with selected work as the primary visual evidence.
 
-Initial palette direction:
+Palette:
 
 - Deep Ink: `#171A18`
 - Warm Ivory: `#F4F0E8`
-- Muted Moss: `#66745F`
+- Muted Moss: `#64715D`
 - Copper / Clay: `#B86F52`
 - Soft Stone: `#D8D2C7`
 

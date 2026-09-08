@@ -6,7 +6,7 @@
   --foreground: #171a18;
   --muted: #4f5b4b;
   --accent: #b86f52;
-  --accent-secondary: #66745f;
+  --accent-secondary: #64715d;
   --border: #d8d2c7;
   --focus: #8d4f37;
   --font-body: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
@@ -55,7 +55,7 @@ body {
 
 ::selection {
   background: var(--accent);
-  color: var(--background);
+  color: var(--foreground);
 }
 
 h1,

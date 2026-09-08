@@ -7,7 +7,7 @@ import styles from "./home.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
+    <div id="top" className={styles.page}>
       <section className={styles.hero} aria-labelledby="home-title">
         <div className={styles.heroInner}>
           <p className={styles.heroKicker}>
@@ -297,10 +297,15 @@ export default function Home() {
           </h2>
         </div>
 
-        <p>
-          Tell us how the business works, where the friction is, or what you
-          wish existed. We’ll help turn that into a clear plan and build what
-          actually helps.
+        <p className={styles.philosophyAside}>
+          <span>
+            Tell us how the business works, where the friction is, or what you
+            wish existed. We’ll help turn that into a clear plan and build what
+            actually helps.
+          </span>
+          <Link href="#top" className={styles.backToTop}>
+            Back to top <span aria-hidden="true">↑</span>
+          </Link>
         </p>
       </section>
 

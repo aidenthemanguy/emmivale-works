@@ -1,0 +1,657 @@
+.workPage {
+  overflow: clip;
+}
+
+.overviewHero {
+  position: relative;
+  min-height: 34rem;
+  padding: 7rem 0 8rem;
+  background: var(--background);
+}
+
+.overviewHero::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 38%;
+  height: 42%;
+  background: var(--surface);
+  clip-path: polygon(24% 8%, 100% 0, 100% 100%, 0 100%);
+  content: "";
+}
+
+.overviewHeroInner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 9rem minmax(0, 1fr);
+  gap: 4rem;
+  width: min(91vw, 96rem);
+  margin-inline: auto;
+}
+
+.eyebrow,
+.projectCategory {
+  color: var(--accent-secondary);
+  font-family: var(--font-code);
+  font-size: 0.7rem;
+  font-weight: 750;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.overviewHero h1 {
+  font-size: 6rem;
+  font-weight: 780;
+  line-height: 0.86;
+  text-transform: uppercase;
+}
+
+.overviewPhrase {
+  max-width: 52rem;
+  margin-top: 2.4rem;
+  font-family: var(--font-display);
+  font-size: 3.35rem;
+  line-height: 1.02;
+}
+
+.overviewSummary {
+  max-width: 42rem;
+  margin: 2.3rem 0 0 20%;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.overviewThread {
+  position: absolute;
+  z-index: 1;
+  right: 5%;
+  bottom: 4rem;
+  display: grid;
+  grid-template-columns: 3.5rem 0.75rem 9rem;
+  align-items: center;
+}
+
+.overviewThread span {
+  height: 1px;
+  background: var(--accent-secondary);
+}
+
+.overviewThread i {
+  width: 0.65rem;
+  height: 0.65rem;
+  background: var(--accent);
+  transform: rotate(45deg);
+}
+
+.autoProject,
+.managerProject {
+  position: relative;
+  padding: 8rem 0 10rem;
+}
+
+.autoProject {
+  background: var(--surface);
+  clip-path: polygon(0 2rem, 27% 0, 66% 1.3rem, 100% 0, 100% 100%, 0 100%);
+}
+
+.projectInner {
+  width: min(94vw, 106rem);
+  margin-inline: auto;
+}
+
+.projectHeader {
+  display: grid;
+  grid-template-columns: minmax(34rem, 1fr) minmax(20rem, 0.42fr);
+  align-items: end;
+  gap: 5rem;
+  width: min(91vw, 96rem);
+  margin-inline: auto;
+}
+
+.projectHeader h2 {
+  display: flex;
+  align-items: baseline;
+  gap: 1.25rem;
+  margin-top: 1rem;
+  font-size: 4.25rem;
+  font-weight: 780;
+  line-height: 0.94;
+  text-transform: uppercase;
+}
+
+.projectNumber {
+  flex: none;
+  color: var(--focus);
+  font-family: var(--font-code);
+  font-size: 0.86rem;
+  font-weight: 750;
+  line-height: 1;
+  letter-spacing: 0.08em;
+}
+
+.projectSummary > p {
+  max-width: 32rem;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.textLink,
+.textLinkDark {
+  position: relative;
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 1.35rem;
+  font-size: 0.83rem;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.textLink::after,
+.textLinkDark::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: var(--accent);
+  content: "";
+  transform: scaleX(0.3);
+  transform-origin: left;
+  transition: transform 250ms ease;
+}
+
+.textLink:hover::after,
+.textLink:focus-visible::after,
+.textLinkDark:hover::after,
+.textLinkDark:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.autoEvidence {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 14rem;
+  align-items: end;
+  gap: 2.5rem;
+  margin-top: 5.5rem;
+}
+
+.autoDesktopFigure,
+.autoMobileFigure,
+.managerRequestsFigure,
+.managerDetailFigure {
+  margin: 0;
+}
+
+.productImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.autoDesktopFigure .productImage {
+  box-shadow: 0 1.8rem 4.5rem rgba(23, 26, 24, 0.15);
+}
+
+.autoMobileFigure {
+  position: relative;
+  margin-bottom: -3.5rem;
+}
+
+.autoMobileFigure::before {
+  position: absolute;
+  z-index: -1;
+  top: -0.5rem;
+  right: -0.5rem;
+  bottom: -0.5rem;
+  left: 34%;
+  background: var(--accent);
+  content: "";
+}
+
+.autoMobileFigure .productImage {
+  box-shadow: 0 1.3rem 3rem rgba(23, 26, 24, 0.18);
+}
+
+.autoEvidence figcaption,
+.managerEvidence figcaption {
+  margin-top: 0.8rem;
+  color: var(--muted);
+  font-family: var(--font-code);
+  font-size: 0.68rem;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.managerProject {
+  z-index: 1;
+  margin-top: 0;
+  padding-top: 11rem;
+  padding-bottom: 12rem;
+  background: var(--foreground);
+  clip-path: polygon(0 4.5rem, 30% 0, 74% 3rem, 100% 0, 100% calc(100% - 3rem), 68% 100%, 28% calc(100% - 2rem), 0 100%);
+  color: var(--background);
+}
+
+.managerProject .projectCategory {
+  color: #a6b49d;
+}
+
+.managerHeader .projectSummary > p {
+  color: rgba(244, 240, 232, 0.74);
+}
+
+.textLinkDark {
+  color: var(--background);
+}
+
+.managerEvidence {
+  margin-top: 5.5rem;
+}
+
+.managerRequestsFigure {
+  position: relative;
+  width: 96%;
+}
+
+.managerRequestsFigure::before {
+  position: absolute;
+  z-index: -1;
+  top: -0.65rem;
+  right: 28%;
+  bottom: 35%;
+  left: -0.65rem;
+  background: var(--accent-secondary);
+  content: "";
+}
+
+.managerEvidence .productImage {
+  background: var(--surface);
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.34);
+}
+
+.managerEvidence figcaption {
+  color: rgba(244, 240, 232, 0.62);
+}
+
+.managerDetailFigure {
+  width: 62%;
+  margin: 4rem 0 0 auto;
+}
+
+.connectedStory {
+  position: relative;
+  padding: 10rem 0 8rem;
+  background: var(--background);
+}
+
+.connectedInner {
+  width: min(88vw, 88rem);
+  margin-inline: auto;
+}
+
+.connectedInner > header {
+  display: grid;
+  grid-template-columns: 8rem minmax(26rem, 0.9fr) minmax(21rem, 0.55fr);
+  align-items: end;
+  gap: 3rem;
+}
+
+.connectedInner h2 {
+  max-width: 43rem;
+  font-size: 3.35rem;
+  font-weight: 760;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.connectedInner > header > p:last-child {
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.72;
+}
+
+.businessFlow {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 6rem;
+  list-style: none;
+}
+
+.businessFlow::before {
+  position: absolute;
+  top: 0.34rem;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background: var(--accent-secondary);
+  content: "";
+}
+
+.businessFlow li {
+  position: relative;
+  padding: 1.6rem 1.5rem 0 0;
+  font-size: 0.78rem;
+  font-weight: 750;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.businessFlow li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.68rem;
+  height: 0.68rem;
+  background: var(--accent);
+  content: "";
+  transform: rotate(45deg);
+}
+
+.businessFlow li:not(:last-child)::after {
+  position: absolute;
+  top: 1.38rem;
+  right: 0.35rem;
+  color: var(--accent-secondary);
+  content: "→";
+  font-size: 0.85rem;
+}
+
+.technicalFlow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 0;
+  margin-top: 2.8rem;
+  color: var(--muted);
+  font-family: var(--font-code);
+  font-size: 0.68rem;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.technicalFlow span:not(:last-child)::after {
+  margin-inline: 0.75rem;
+  color: var(--accent);
+  content: "/";
+}
+
+.disclosure {
+  max-width: 64rem;
+  margin-top: 5rem;
+  padding-top: 1.7rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.75;
+}
+
+@media (max-width: 75rem) {
+  .overviewHero h1 {
+    font-size: 5.25rem;
+  }
+
+  .overviewPhrase {
+    font-size: 3rem;
+  }
+
+  .projectHeader {
+    grid-template-columns: minmax(28rem, 1fr) minmax(18rem, 0.5fr);
+    gap: 3rem;
+  }
+
+  .projectHeader h2 {
+    font-size: 3.55rem;
+  }
+
+  .connectedInner > header {
+    grid-template-columns: 5rem minmax(24rem, 0.9fr) minmax(19rem, 0.55fr);
+    gap: 2rem;
+  }
+
+  .connectedInner h2 {
+    font-size: 2.85rem;
+  }
+}
+
+@media (max-width: 62rem) {
+  .overviewHeroInner {
+    grid-template-columns: 6rem minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .overviewSummary {
+    margin-left: 10%;
+  }
+
+  .projectHeader {
+    grid-template-columns: minmax(24rem, 1fr) minmax(16rem, 0.55fr);
+    gap: 2rem;
+  }
+
+  .projectHeader h2 {
+    font-size: 3rem;
+  }
+
+  .autoEvidence {
+    grid-template-columns: minmax(0, 1fr) 11.5rem;
+    gap: 1.5rem;
+  }
+
+  .connectedInner > header {
+    grid-template-columns: 1fr 0.62fr;
+  }
+
+  .connectedInner > header .eyebrow {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 48rem) {
+  .overviewHero {
+    min-height: 35rem;
+    padding: 5rem 0 7rem;
+  }
+
+  .overviewHero::after {
+    width: 44%;
+    height: 35%;
+  }
+
+  .overviewHeroInner {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+    width: calc(100% - 3rem);
+  }
+
+  .overviewHero h1 {
+    font-size: 4.35rem;
+  }
+
+  .overviewPhrase {
+    max-width: 24rem;
+    margin-top: 1.8rem;
+    font-size: 2.55rem;
+  }
+
+  .overviewSummary {
+    max-width: 24rem;
+    margin: 2rem 0 0;
+    font-size: 0.96rem;
+  }
+
+  .overviewThread {
+    right: 1.5rem;
+    bottom: 3rem;
+    grid-template-columns: 2rem 0.65rem 4rem;
+  }
+
+  .autoProject,
+  .managerProject {
+    padding: 6.5rem 0 7rem;
+  }
+
+  .autoProject {
+    clip-path: polygon(0 1.3rem, 63% 0, 100% 1rem, 100% 100%, 0 100%);
+  }
+
+  .projectInner {
+    width: calc(100% - 1rem);
+  }
+
+  .projectHeader {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: calc(100% - 2rem);
+  }
+
+  .projectHeader h2 {
+    align-items: flex-start;
+    font-size: 2.65rem;
+  }
+
+  .projectNumber {
+    padding-top: 0.42rem;
+    font-size: 0.72rem;
+  }
+
+  .projectSummary > p {
+    max-width: 27rem;
+    font-size: 0.94rem;
+  }
+
+  .autoEvidence {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    margin-top: 3.8rem;
+  }
+
+  .autoMobileFigure {
+    width: min(52vw, 12rem);
+    margin: 0 1rem 0 auto;
+  }
+
+  .autoEvidence figcaption,
+  .managerEvidence figcaption {
+    font-size: 0.64rem;
+  }
+
+  .managerProject {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    clip-path: polygon(0 2.4rem, 61% 0, 100% 1.8rem, 100% calc(100% - 2rem), 42% 100%, 0 calc(100% - 1.2rem));
+  }
+
+  .managerEvidence {
+    margin-top: 4rem;
+  }
+
+  .managerRequestsFigure,
+  .managerDetailFigure {
+    width: 100%;
+  }
+
+  .managerDetailFigure {
+    margin-top: 3.5rem;
+  }
+
+  .connectedStory {
+    padding: 8rem 0 6rem;
+  }
+
+  .connectedInner {
+    width: calc(100% - 3rem);
+  }
+
+  .connectedInner > header {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .connectedInner h2 {
+    max-width: 25rem;
+    font-size: 2.5rem;
+  }
+
+  .businessFlow {
+    display: block;
+    margin-top: 4rem;
+    padding-left: 0.2rem;
+  }
+
+  .businessFlow::before {
+    top: 0.34rem;
+    right: auto;
+    bottom: 0.34rem;
+    left: 0.33rem;
+    width: 1px;
+    height: auto;
+  }
+
+  .businessFlow li {
+    min-height: 5rem;
+    padding: 0 0 2rem 2rem;
+  }
+
+  .businessFlow li::before {
+    top: 0;
+  }
+
+  .businessFlow li:not(:last-child)::after {
+    display: none;
+  }
+
+  .technicalFlow {
+    display: block;
+    margin-top: 2rem;
+  }
+
+  .technicalFlow span {
+    display: block;
+  }
+
+  .technicalFlow span:not(:last-child)::after {
+    display: none;
+  }
+
+  .technicalFlow span + span {
+    margin-top: 0.4rem;
+  }
+
+  .disclosure {
+    margin-top: 3.5rem;
+  }
+}
+
+@media (max-width: 22rem) {
+  .overviewHero h1 {
+    font-size: 3.7rem;
+  }
+
+  .overviewPhrase {
+    font-size: 2.25rem;
+  }
+
+  .projectHeader h2 {
+    gap: 0.75rem;
+    font-size: 2.2rem;
+  }
+
+  .connectedInner h2 {
+    font-size: 2.15rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .textLink::after,
+  .textLinkDark::after {
+    transition: none;
+  }
+}

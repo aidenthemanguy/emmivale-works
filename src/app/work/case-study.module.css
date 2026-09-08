@@ -1,0 +1,1072 @@
+.casePage {
+  overflow: clip;
+  background: var(--surface);
+}
+
+.caseHero {
+  position: relative;
+  padding: 3.5rem 0 7rem;
+  background: var(--surface);
+  clip-path: polygon(0 0, 100% 0, 100% 97%, 71% 100%, 0 98.5%);
+}
+
+.caseHeroInner,
+.wideChapterInner {
+  width: min(94vw, 106rem);
+  margin: 0 auto;
+}
+
+.backLink,
+.nextProject,
+.projectInvitation a {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-code);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+}
+
+.backLink {
+  padding: 0.6rem 0;
+  color: var(--muted);
+}
+
+.backLink span,
+.nextProject span:last-child,
+.projectInvitation a span {
+  transition: transform 180ms ease;
+}
+
+.backLink:hover span,
+.backLink:focus-visible span {
+  transform: translateX(-0.2rem);
+}
+
+.caseHeroGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(19rem, 0.42fr);
+  gap: 4rem;
+  align-items: end;
+  margin-top: 5rem;
+}
+
+.caseIndex,
+.chapterLabel,
+.caseCaption {
+  font-family: var(--font-code);
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1.45;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.caseIndex {
+  color: var(--focus);
+}
+
+.caseTitle {
+  max-width: 11ch;
+  margin-top: 0.9rem;
+  font-size: 6.25rem;
+  font-weight: 800;
+  line-height: 0.88;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.caseCategory {
+  margin-top: 1.7rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.caseDisclosure {
+  max-width: 36rem;
+  margin-top: 0.8rem;
+  color: var(--muted);
+  font-family: var(--font-code);
+  font-size: 0.68rem;
+  font-weight: 650;
+  line-height: 1.55;
+}
+
+.caseSummary {
+  padding-bottom: 0.45rem;
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  line-height: 1.35;
+}
+
+.openingFigure {
+  width: min(96rem, 100%);
+  margin: 6.5rem auto 0;
+}
+
+.caseImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.openingFigure .caseImage {
+  box-shadow: 0 2.2rem 5rem rgba(23, 26, 24, 0.14);
+}
+
+.caseCaption {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 0.9rem;
+  color: var(--muted);
+}
+
+.caseCaption::before {
+  width: 1.8rem;
+  height: 1px;
+  background: currentColor;
+  content: "";
+}
+
+.chapter {
+  padding: 9rem 0;
+  background: var(--surface);
+}
+
+.chapterInner {
+  width: min(86vw, 82rem);
+  margin: 0 auto;
+}
+
+.chapterHeader {
+  max-width: 50rem;
+}
+
+.chapterLabel {
+  color: var(--focus);
+}
+
+.chapterHeader h2 {
+  margin-top: 1rem;
+  font-size: 3.2rem;
+  font-weight: 750;
+  line-height: 1;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.challengeBody {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(19rem, 0.58fr);
+  gap: 7rem;
+  align-items: start;
+  margin-top: 5rem;
+}
+
+.humanStatement {
+  max-width: 21ch;
+  font-family: var(--font-display);
+  font-size: 2.45rem;
+  line-height: 1.24;
+}
+
+.prose {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.prose p + p {
+  margin-top: 1.4rem;
+}
+
+.chapterLead {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(19rem, 0.5fr);
+  gap: 6rem;
+  align-items: end;
+}
+
+.stoneChapter {
+  position: relative;
+  background: var(--background);
+  clip-path: polygon(0 1.4%, 30% 0, 100% 1%, 100% 98.6%, 67% 100%, 0 99%);
+}
+
+.experienceRail,
+.discoveryRail {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 6rem;
+  border-top: 1px solid var(--border);
+}
+
+.experienceRail > div,
+.discoveryRail > div {
+  min-height: 11rem;
+  padding: 1.35rem 1.5rem 1.5rem 0;
+  border-right: 1px solid var(--border);
+}
+
+.experienceRail > div + div,
+.discoveryRail > div + div {
+  padding-left: 1.5rem;
+}
+
+.experienceRail > div:last-child,
+.discoveryRail > div:last-child {
+  border-right: 0;
+}
+
+.experienceRail dt,
+.discoveryRail dt {
+  color: var(--foreground);
+  font-family: var(--font-code);
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.experienceRail dd,
+.discoveryRail dd {
+  margin-top: 2rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.mobileEvidence {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 18rem;
+  gap: 8rem;
+  align-items: center;
+  width: min(68rem, 88%);
+  margin: 9rem auto 0;
+}
+
+.mobileEvidenceCopy h3 {
+  max-width: 17ch;
+  margin-top: 1rem;
+  font-family: var(--font-display);
+  font-size: 2.35rem;
+  font-weight: 500;
+  line-height: 1.18;
+}
+
+.mobileEvidenceCopy > p:last-child {
+  max-width: 38rem;
+  margin-top: 2rem;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.mobileFigure {
+  position: relative;
+  transform: rotate(1deg);
+}
+
+.mobileFigure::before {
+  position: absolute;
+  inset: 2rem -2rem -2rem 2rem;
+  z-index: -1;
+  border: 1px solid var(--accent-secondary);
+  content: "";
+}
+
+.mobileFigure .caseImage {
+  box-shadow: 0 1.5rem 3.2rem rgba(23, 26, 24, 0.15);
+}
+
+.darkChapter {
+  background: var(--foreground);
+  color: var(--surface);
+  clip-path: polygon(0 0.7%, 74% 0, 100% 1.5%, 100% 99%, 29% 100%, 0 98.8%);
+}
+
+.darkChapter .prose,
+.darkChapter .caseCaption,
+.darkChapter .requestExplanation,
+.darkChapter .chapterLabel {
+  color: #c7c9c2;
+}
+
+.requestFields {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 5.5rem;
+  border-top: 1px solid rgba(255, 250, 242, 0.28);
+}
+
+.requestFields li {
+  min-height: 5.7rem;
+  padding: 1.15rem 1rem 1rem 0;
+  border-bottom: 1px solid rgba(255, 250, 242, 0.18);
+  font-family: var(--font-code);
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.requestFigure,
+.recordFigure,
+.activityFigure {
+  margin: 6rem auto 0;
+}
+
+.requestFigure {
+  width: min(92rem, 92%);
+}
+
+.requestFigure .caseImage,
+.recordFigure .caseImage,
+.activityFigure .caseImage {
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.24);
+}
+
+.requestExplanation {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5rem;
+  width: min(66rem, 82%);
+  margin: 4rem auto 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+.connectionPath,
+.workflowPath,
+.persistencePath {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2.5rem;
+  margin-top: 6rem;
+  list-style: none;
+}
+
+.connectionPath::before,
+.workflowPath::before,
+.persistencePath::before {
+  position: absolute;
+  top: 0.4rem;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background: var(--border);
+  content: "";
+}
+
+.connectionPath li,
+.workflowPath li,
+.persistencePath li {
+  position: relative;
+  padding-top: 2.15rem;
+}
+
+.connectionPath li::before,
+.workflowPath li::before,
+.persistencePath li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 2px solid var(--surface);
+  background: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+  content: "";
+  transform: rotate(45deg);
+}
+
+.connectionPath strong,
+.workflowPath strong,
+.persistencePath strong {
+  display: block;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.connectionPath span,
+.workflowPath span,
+.persistencePath span {
+  display: block;
+  max-width: 16rem;
+  margin-top: 0.8rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.technicalChapter {
+  background: var(--background);
+}
+
+.technicalLayer {
+  display: grid;
+  grid-template-columns: minmax(0, 0.75fr) minmax(20rem, 1fr);
+  gap: 7rem;
+  margin-top: 4.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.technicalLayer > p {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
+  gap: 0.7rem 1.8rem;
+}
+
+.techList li {
+  position: relative;
+  padding-left: 1rem;
+  font-family: var(--font-code);
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.techList li::before {
+  position: absolute;
+  top: 0.43rem;
+  left: 0;
+  width: 0.4rem;
+  height: 0.4rem;
+  background: var(--accent-secondary);
+  content: "";
+  transform: rotate(45deg);
+}
+
+.takeaway {
+  padding: 9rem 0;
+  background: var(--accent-secondary);
+  color: var(--surface);
+}
+
+.takeawayInner {
+  width: min(82vw, 72rem);
+  margin: 0 auto;
+}
+
+.takeaway .chapterLabel {
+  color: #e2dfd5;
+}
+
+.takeaway h2 {
+  max-width: 26ch;
+  margin-top: 1.4rem;
+  font-family: var(--font-display);
+  font-size: 3.3rem;
+  font-weight: 500;
+  line-height: 1.18;
+  text-wrap: balance;
+}
+
+.caseFooter {
+  padding: 4rem max(3vw, 1.25rem) 5rem;
+  background: var(--background);
+}
+
+.projectNav,
+.projectInvitation {
+  width: min(86vw, 82rem);
+  margin: 0 auto;
+}
+
+.projectNav {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: center;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.nextProject {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.nextProject span:first-child {
+  color: var(--muted);
+  font-size: 0.6rem;
+}
+
+.nextProject:hover span:last-child,
+.nextProject:focus-visible span:last-child,
+.projectInvitation a:hover span,
+.projectInvitation a:focus-visible span {
+  transform: translateX(0.2rem);
+}
+
+.projectInvitation {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: baseline;
+  padding-top: 3rem;
+}
+
+.projectInvitation p {
+  color: var(--muted);
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+}
+
+.projectInvitation a {
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid currentColor;
+}
+
+/* Manager-specific evidence sequence */
+.managerHero {
+  background: var(--foreground);
+  color: var(--surface);
+}
+
+.managerHero .backLink,
+.managerHero .caseSummary,
+.managerHero .caseCategory,
+.managerHero .caseDisclosure,
+.managerHero .caseCaption {
+  color: #c7c9c2;
+}
+
+.managerHero .openingFigure .caseImage {
+  box-shadow: 0 2.5rem 6rem rgba(0, 0, 0, 0.36);
+}
+
+.discoveryRail {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.discoveryRail > div:nth-child(3) {
+  border-right: 0;
+}
+
+.discoveryRail > div:nth-child(n + 4) {
+  border-top: 1px solid var(--border);
+}
+
+.recordFigure,
+.activityFigure {
+  width: min(96rem, 94%);
+}
+
+.evidenceIntro {
+  display: grid;
+  grid-template-columns: minmax(0, 0.54fr) minmax(20rem, 0.46fr);
+  gap: 6rem;
+  align-items: end;
+}
+
+.evidenceNotes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 3rem;
+  margin-top: 4.5rem;
+}
+
+.evidenceNotes > div {
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--border);
+}
+
+.evidenceNotes h3 {
+  font-family: var(--font-code);
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.evidenceNotes p {
+  margin-top: 1.25rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.workflowChapter {
+  background: #e7e3d9;
+  clip-path: polygon(0 1.2%, 37% 0, 100% 1.1%, 100% 98.8%, 63% 100%, 0 99%);
+}
+
+.workflowPath {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.alternateStates {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  margin-top: 3rem;
+  color: var(--muted);
+  font-family: var(--font-code);
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.alternateStates span {
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--accent);
+}
+
+.twoColumnNotes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6rem;
+  margin-top: 5rem;
+}
+
+.twoColumnNotes article {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.twoColumnNotes h3 {
+  font-family: var(--font-display);
+  font-size: 2.15rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.twoColumnNotes p {
+  margin-top: 1.6rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+.securityChapter {
+  background: var(--foreground);
+  color: var(--surface);
+}
+
+.securityChapter .chapterLabel,
+.securityChapter .prose,
+.securityChapter .humanStatement {
+  color: #d2d3cd;
+}
+
+.securityLayers {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2.5rem;
+  margin-top: 5rem;
+}
+
+.securityLayers div {
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 250, 242, 0.3);
+}
+
+.securityLayers strong {
+  display: block;
+  font-family: var(--font-code);
+  font-size: 0.7rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.securityLayers p {
+  margin-top: 1.5rem;
+  color: #c7c9c2;
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.persistencePath {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.previousProject {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.previousProject span:first-child {
+  color: var(--muted);
+  font-size: 0.6rem;
+}
+
+.previousProject:hover span:last-child,
+.previousProject:focus-visible span:last-child {
+  transform: none;
+}
+
+@media (max-width: 75rem) {
+  .caseTitle {
+    font-size: 5rem;
+  }
+
+  .caseHeroGrid {
+    gap: 3rem;
+  }
+
+  .chapterInner {
+    width: min(90vw, 82rem);
+  }
+
+  .challengeBody,
+  .chapterLead,
+  .evidenceIntro {
+    gap: 4rem;
+  }
+
+  .mobileEvidence {
+    gap: 5rem;
+    width: 84%;
+  }
+}
+
+@media (max-width: 62rem) {
+  .caseHero {
+    padding-bottom: 5rem;
+  }
+
+  .caseHeroGrid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-top: 3.8rem;
+  }
+
+  .caseSummary {
+    max-width: 34rem;
+  }
+
+  .openingFigure {
+    margin-top: 4.5rem;
+  }
+
+  .chapter {
+    padding: 7rem 0;
+  }
+
+  .chapterLead,
+  .evidenceIntro {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+
+  .chapterLead .prose,
+  .evidenceIntro .prose {
+    max-width: 38rem;
+  }
+
+  .challengeBody {
+    gap: 3.5rem;
+  }
+
+  .mobileEvidence {
+    gap: 4rem;
+    width: 92%;
+  }
+
+  .requestFigure,
+  .recordFigure,
+  .activityFigure {
+    width: 100%;
+  }
+
+  .requestExplanation,
+  .technicalLayer {
+    gap: 3.5rem;
+    width: 90%;
+  }
+
+  .connectionPath,
+  .workflowPath,
+  .persistencePath {
+    gap: 1.2rem;
+  }
+
+  .evidenceNotes,
+  .securityLayers {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  .caseHero {
+    padding: 2rem 0 4rem;
+    clip-path: polygon(0 0, 100% 0, 100% 99%, 0 97.8%);
+  }
+
+  .caseHeroInner,
+  .wideChapterInner {
+    width: calc(100% - 2rem);
+  }
+
+  .caseHeroGrid {
+    margin-top: 3rem;
+  }
+
+  .caseTitle {
+    max-width: 100%;
+    font-size: 3.55rem;
+    line-height: 0.92;
+  }
+
+  .caseSummary {
+    font-size: 1.35rem;
+  }
+
+  .openingFigure {
+    width: calc(100% + 1rem);
+    margin-right: -0.5rem;
+    margin-left: -0.5rem;
+  }
+
+  .caseCaption {
+    align-items: flex-start;
+    font-size: 0.6rem;
+  }
+
+  .chapter {
+    padding: 5.5rem 0;
+  }
+
+  .chapterInner {
+    width: calc(100% - 2rem);
+  }
+
+  .chapterHeader h2 {
+    font-size: 2.35rem;
+  }
+
+  .challengeBody {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-top: 3rem;
+  }
+
+  .humanStatement {
+    font-size: 2rem;
+  }
+
+  .stoneChapter,
+  .darkChapter,
+  .workflowChapter {
+    clip-path: polygon(0 0.5%, 100% 0, 100% 99.5%, 0 100%);
+  }
+
+  .experienceRail,
+  .discoveryRail {
+    grid-template-columns: 1fr;
+    margin-top: 4rem;
+  }
+
+  .experienceRail > div,
+  .discoveryRail > div,
+  .experienceRail > div + div,
+  .discoveryRail > div + div {
+    min-height: 0;
+    padding: 1.25rem 0 2rem;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .experienceRail dd,
+  .discoveryRail dd {
+    margin-top: 0.8rem;
+  }
+
+  .mobileEvidence {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    width: 100%;
+    margin-top: 5rem;
+  }
+
+  .mobileFigure {
+    width: min(68vw, 17rem);
+    margin: 0 auto;
+  }
+
+  .mobileFigure::before {
+    inset: 1rem -1rem -1rem 1rem;
+  }
+
+  .requestFields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 3.5rem;
+  }
+
+  .requestFields li {
+    min-height: 4.5rem;
+  }
+
+  .requestFigure,
+  .recordFigure,
+  .activityFigure {
+    margin-top: 4rem;
+  }
+
+  .requestExplanation,
+  .technicalLayer,
+  .twoColumnNotes {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .connectionPath,
+  .workflowPath,
+  .persistencePath {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-top: 4rem;
+    padding-left: 0.35rem;
+  }
+
+  .connectionPath::before,
+  .workflowPath::before,
+  .persistencePath::before {
+    top: 0;
+    right: auto;
+    bottom: 0;
+    left: 0.72rem;
+    width: 1px;
+    height: auto;
+  }
+
+  .connectionPath li,
+  .workflowPath li,
+  .persistencePath li {
+    padding: 0 0 2.5rem 2.5rem;
+  }
+
+  .connectionPath li::before,
+  .workflowPath li::before,
+  .persistencePath li::before {
+    top: 0;
+    left: 0;
+  }
+
+  .technicalLayer {
+    margin-top: 3rem;
+  }
+
+  .takeaway {
+    padding: 6rem 0;
+  }
+
+  .takeawayInner {
+    width: calc(100% - 2rem);
+  }
+
+  .takeaway h2 {
+    font-size: 2.35rem;
+  }
+
+  .evidenceNotes,
+  .securityLayers {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    margin-top: 3.5rem;
+  }
+
+  .workflowPath {
+    margin-top: 4rem;
+  }
+
+  .alternateStates {
+    justify-content: flex-start;
+    margin-left: 2.85rem;
+  }
+
+  .caseFooter {
+    padding: 3.5rem 1rem 4rem;
+  }
+
+  .projectNav,
+  .projectInvitation {
+    width: 100%;
+  }
+
+  .projectNav {
+    align-items: flex-start;
+  }
+
+  .nextProject {
+    max-width: 10rem;
+    flex-wrap: wrap;
+  }
+
+  .projectInvitation {
+    align-items: flex-start;
+  }
+
+  .projectInvitation p {
+    max-width: 10rem;
+    font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 22rem) {
+  .caseTitle {
+    font-size: 3rem;
+  }
+
+  .caseHeroInner,
+  .wideChapterInner,
+  .chapterInner,
+  .takeawayInner {
+    width: calc(100% - 1.5rem);
+  }
+
+  .chapterHeader h2,
+  .takeaway h2 {
+    font-size: 2rem;
+  }
+
+  .mobileEvidenceCopy h3,
+  .twoColumnNotes h3 {
+    font-size: 1.8rem;
+  }
+
+  .requestFields li {
+    font-size: 0.64rem;
+  }
+
+  .projectNav {
+    gap: 1rem;
+  }
+
+  .projectInvitation {
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backLink span,
+  .nextProject span:last-child,
+  .projectInvitation a span {
+    transition: none;
+  }
+}

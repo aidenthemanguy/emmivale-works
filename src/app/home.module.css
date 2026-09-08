@@ -263,7 +263,7 @@
   flex: none;
   align-items: baseline;
   gap: 0.42rem;
-  color: var(--accent);
+  color: var(--focus);
   font-family: var(--font-code);
   font-size: 0.9rem;
   font-weight: 750;
@@ -498,7 +498,7 @@
 }
 
 .handoffLabels > p:nth-child(2) {
-  color: var(--accent);
+  color: var(--focus);
   font-family: var(--font-code);
   font-size: 0.68rem;
   letter-spacing: 0.1em;
@@ -889,7 +889,7 @@
 }
 
 .routeStage[data-view="technical"] h3 {
-  color: var(--accent);
+  color: var(--focus);
 }
 
 .routeStage li p {
@@ -1454,13 +1454,35 @@
   text-transform: uppercase;
 }
 
-.philosophyField > p {
+.philosophyAside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.35rem;
   max-width: 34rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--border);
   color: var(--muted);
   font-size: 1rem;
   line-height: 1.75;
+}
+
+.backToTop {
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--foreground);
+  font-family: var(--font-code);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration-color: var(--accent);
+  text-transform: uppercase;
+}
+
+.backToTop span {
+  color: var(--focus);
 }
 
 .finalCta {

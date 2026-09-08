@@ -25,3 +25,8 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - Do not add a CMS, Supabase, authentication, analytics, global state, form libraries, animation libraries, or UI libraries until approved.
 - Run lint and build after substantial milestones.
 - Maintain Emmivale Works' warm, human, precise tone.
+- Keep project-inquiry credentials server-only.
+- Do not log full project-inquiry bodies unnecessarily or expose API keys.
+- Do not add persistent inquiry storage without explicit approval.
+- Preserve project-inquiry form accessibility, including labels, error associations, focus behavior, and keyboard use.
+- Do not weaken project-inquiry server validation when changing the form.

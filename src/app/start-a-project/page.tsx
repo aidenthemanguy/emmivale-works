@@ -1,29 +1,87 @@
 import type { Metadata } from "next";
-import { Section } from "@/components/section";
+import { ProjectInquiryForm } from "./project-inquiry-form";
+import styles from "./start-a-project.module.css";
+
+const description =
+  "Tell Emmivale Works what you're trying to build and start a conversation about a website, custom software, or business system.";
 
 export const metadata: Metadata = {
   title: "Start a Project",
-  description:
-    "Start a conversation with Emmivale Works about a website, custom software project, or business system.",
+  description,
   alternates: {
     canonical: "/start-a-project",
   },
+  openGraph: {
+    title: "Start a Project | Emmivale Works",
+    description,
+    url: "/start-a-project",
+    siteName: "Emmivale Works",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Start a Project | Emmivale Works",
+    description,
+  },
 };
+
+const progress = [
+  "You",
+  "What you need",
+  "What exists now",
+  "Budget and timing",
+  "Anything else",
+];
 
 export default function StartAProjectPage() {
   return (
-    <Section className="py-20 sm:py-24">
-      <p className="text-sm font-semibold uppercase text-accent-secondary [letter-spacing:0.18em]">
-        Start a Project
-      </p>
-      <h1 className="mt-6 max-w-3xl font-serif text-5xl font-medium leading-tight sm:text-6xl">
-        Tell us what you are trying to build.
-      </h1>
-      <p className="mt-8 max-w-2xl text-lg leading-8 text-muted">
-        This page will become a calm project inquiry flow for websites, custom
-        software, and connected business systems. The form will be added in a
-        later milestone.
-      </p>
-    </Section>
+    <article className={styles.page}>
+      <section className={styles.openingScene} aria-labelledby="start-title">
+        <div className={styles.openingInner}>
+          <div>
+            <p className={styles.eyebrow}>Start a Project</p>
+            <h1 id="start-title">
+              Tell us what you&apos;re trying to build.
+            </h1>
+          </div>
+          <div className={styles.openingCopy}>
+            <p>
+              Start with the idea, the problem, or the part of the business that
+              is harder than it should be.
+            </p>
+            <p>
+              You do not need a technical specification. Tell us what is
+              happening now and what you would like to work better.
+            </p>
+          </div>
+        </div>
+        <div className={styles.openingThread} aria-hidden="true">
+          <span />
+          <i />
+          <span />
+        </div>
+      </section>
+
+      <section className={styles.inquiryScene} aria-label="Project inquiry">
+        <div className={styles.inquiryInner}>
+          <aside className={styles.progressRail} aria-label="Inquiry progression">
+            <p>A short conversation</p>
+            <ol>
+              {progress.map((step) => (
+                <li key={step}>
+                  <span>{step}</span>
+                </li>
+              ))}
+            </ol>
+            <p>A few minutes is enough.</p>
+          </aside>
+
+          <div className={styles.formColumn}>
+            <ProjectInquiryForm />
+          </div>
+        </div>
+      </section>
+    </article>
   );
 }
